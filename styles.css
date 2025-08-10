@@ -1,0 +1,72 @@
+/* Custom styles for the academic personal website */
+
+/* Base typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero section with overlay */
+
+/*
+ * Hero section
+ *
+ * Use a CSS gradient instead of a separate image to create a modern, abstract
+ * background. This avoids the need to upload a large image file and still
+ * provides an attractive backdrop for the introductory content. Adjust the
+ * colours as needed to suit your personal branding.
+ */
+.hero {
+  /* Create a diagonal gradient reminiscent of the teal‑to‑blue palette often
+     found on contemporary academic websites. The gradient stops are chosen to
+     provide depth and visual interest without overwhelming the text. */
+  background: linear-gradient(135deg, #0077b6, #00b4d8, #90e0ef);
+  color: #fff;
+  position: relative;
+  padding: 100px 0;
+  text-align: left;
+}
+
+/* Dark overlay on the hero to ensure text readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Position hero content above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer styling */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Section headings */
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Cards in the home page highlights */
+.home-card i {
+  color: #0d6efd;
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+  .hero {
+    padding: 150px 0;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
